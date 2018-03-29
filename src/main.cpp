@@ -25,8 +25,6 @@
 #include "events/EventQueue.h"
 
 // Application helpers
-#include "DummySensor.h"
-#include "trace_helper.h"
 #include "lora_radio_helper.h"
 
 using namespace events;
@@ -50,16 +48,6 @@ uint8_t rx_buffer[LORAMAC_PHY_MAXPAYLOAD];
  * Maximum number of retries for CONFIRMED messages before giving up
  */
 #define CONFIRMED_MSG_RETRY_COUNTER     3
-
-/**
- * Dummy pin for dummy sensor
- */
-#define PC_9                            0
-
-/**
- * Dummy sensor class object
- */
-DS1820  ds1820(PC_9);
 
 /**
 * This event queue is the global event queue for both the
@@ -93,9 +81,6 @@ static lorawan_app_callbacks_t callbacks;
  */
 int main (void)
 {
-    // setup tracing
-    setup_trace();
-
     // stores the status of a call to LoRaWAN protocol
     lorawan_status_t retcode;
 
@@ -154,20 +139,13 @@ static void send_message()
 {
     uint16_t packet_len;
     int16_t retcode;
-    float sensor_value;
 
-    if (ds1820.begin()) {
-        ds1820.startConversion();
-        sensor_value = ds1820.read();
-        printf("\r\n Dummy Sensor Value = %3.1f \r\n", sensor_value);
-        ds1820.startConversion();
-    } else {
-        printf("\r\n No sensor found \r\n");
-        return;
-    }
-
-    packet_len = sprintf((char*) tx_buffer, "Dummy Sensor Value is %3.1f",
-                    sensor_value);
+    packet_len = 5;
+    tx_buffer[0] = 0xAA;
+    tx_buffer[1] = 0xAA;
+    tx_buffer[2] = 0xAA;
+    tx_buffer[3] = 0xAA;
+    tx_buffer[4] = 0xAA;           
 
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,
                            MSG_CONFIRMED_FLAG);
