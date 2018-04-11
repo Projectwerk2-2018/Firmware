@@ -2,6 +2,7 @@
 
 class Transceiver
 {
+    /*
     private:
         double temperature;
         bool motion;
@@ -16,6 +17,10 @@ class Transceiver
 
     public:
         void set_send(void send);
+    */
 
+    public:
+
+    virtual void send();
     
 };

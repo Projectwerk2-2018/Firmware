@@ -1,5 +1,7 @@
 #include "transceiver.h"
 
+/*
+
 double Transceiver::get_temparure()
 {
     return temperature;
@@ -24,3 +26,9 @@ void Transceiver::set_send(void send)
 {
     this->send = send;
 }
+
+*/
+
+void Transceiver::send(){
+    
+};
