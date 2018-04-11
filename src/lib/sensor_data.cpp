@@ -22,14 +22,14 @@ void SensorData::setHumidity(double inputHumidity){
 
 
 double SensorData::getTemperature(){
-    return temperature
+    return temperature;
 }
 
 int SensorData::getMotion(){
-    return motion
+    return motion;
 }
 
 double SensorData::getHumidity(){
-    return humidity
+    return humidity;
 }
 
