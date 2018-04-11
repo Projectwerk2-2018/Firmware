@@ -4,7 +4,7 @@
 
 
 EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver inputTransceiver){
-    this->transceiver = inputTransceiver;
+    transceiver = inputTransceiver;
 }
 
 collectSensorData(SensorData* outputData){

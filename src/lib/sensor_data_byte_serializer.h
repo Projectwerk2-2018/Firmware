@@ -6,6 +6,8 @@ class SensorDataByteSerializer{
 
     public:
         std::string serialize();
+        
+        int toLoraFormat();
 
 
     private:

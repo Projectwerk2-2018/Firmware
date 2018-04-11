@@ -12,10 +12,6 @@ class EnvironmentSensorBoard{
 
 
 
-
-
-
-
     private:
 
     Transceiver transceiver;

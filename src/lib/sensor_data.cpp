@@ -33,3 +33,6 @@ double SensorData::getHumidity(){
     return humidity;
 }
 
+
+
+
