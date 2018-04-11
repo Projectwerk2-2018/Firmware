@@ -27,6 +27,7 @@ Last we need to enable C++11 compilation. THis can be achieved by changing the t
 ## Adding libraries
 
 If you add other libraries, please only add the `.lib` file to the repository and add the actual library directory to the `code/.gitignore` file. Take a look inside the file for an example.
+
 ---
 
 # Example LoRaWAN application for Mbed-OS
