@@ -5,7 +5,7 @@ class Humidity{
     public:
 
     double getHumidity();
-    void setHumidity(double humidity);   
+    void setHumidity(double inputHumidity);   
 
 
     private:

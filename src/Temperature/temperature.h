@@ -5,7 +5,7 @@ class Temperature{
     public:
 
     double getTemperature();
-    void setTemperature(double temperature);   
+    void setTemperature(double inputTemperature);   
 
 
     private:
