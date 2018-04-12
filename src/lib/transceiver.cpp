@@ -1,4 +1,7 @@
 #include "transceiver.h"
+#include <string>
+
+/*
 
 double Transceiver::get_temparure()
 {
@@ -15,12 +18,23 @@ double Transceiver::get_humidity()
     return humidity;
 }
 
-void Transceiver::get_send()
+void send(double temperature, bool motion, double humidity)
 {
-    return send;
+    std::string Transceiver::to_string()
+    {
+    return "The Temparture is " + std::to_String(temperature) + " "
+            ", movement is " + std::to_string(motion) + " "
+            ", humidity is " + std::to_string(humidity) + "."
+    }   
 }
 
 void Transceiver::set_send(void send)
 {
     this->send = send;
 }
+
+*/
+
+void Transceiver::send(){
+    
+};
