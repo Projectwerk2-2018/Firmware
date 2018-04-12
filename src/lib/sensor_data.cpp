@@ -3,7 +3,9 @@
 using namespace std;
 
 // default constructor returns a json-object
-SensorData(double temperature, int motion, double humidity){
+
+/*SensorData(double temperature, int motion, double humidity){*/
+SensorData::SensorData(){
     return  "{\"temperature\": {\"value\":" + std::to_string(temperature) + ", \"unit\": \"°C\"}, " +
             "\"motion\": " + std::to_string(motion) + ", "
             "\"humidity\": {\"value\":" + std::to_string(humidity) + ", \"unit\": \"%\"}}" ;
