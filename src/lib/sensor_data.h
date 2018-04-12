@@ -5,9 +5,12 @@
 class SensorData 
 {
     private:
-        double temperature;
-        int motion;
-        double humidity;
+
+    double temperature;
+    int motion;
+    double humidity;
+
+
 
     public:
 
