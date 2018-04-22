@@ -27,6 +27,8 @@
 // Application helpers
 #include "lora_radio_helper.h"
 
+#include "sensordatabyteserializer.h"
+
 using namespace events;
 
 uint8_t tx_buffer[LORAMAC_PHY_MAXPAYLOAD];
@@ -140,12 +142,15 @@ static void send_message()
     uint16_t packet_len;
     int16_t retcode;
 
-    packet_len = 5;
-    tx_buffer[0] = 0xAA;
-    tx_buffer[1] = 0xAA;
-    tx_buffer[2] = 0xAA;
-    tx_buffer[3] = 0xAA;
-    tx_buffer[4] = 0xAA;           
+    //packet_len = 5;
+    // tx_buffer[0] = 0xAA;
+    // tx_buffer[1] = 0xAA;
+    // tx_buffer[2] = 0xAA;
+    // tx_buffer[3] = 0xAA;
+    // tx_buffer[4] = 0xAA; 
+
+    tx_buffer = sensordatabyteserializer.serialize();
+
 
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,
                            MSG_CONFIRMED_FLAG);
