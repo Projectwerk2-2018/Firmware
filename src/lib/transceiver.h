@@ -18,7 +18,7 @@ class Transceiver
 
 void send(double temperature, bool motion, double humidity);
     */
-
+   
     public:
 
     virtual void send();
