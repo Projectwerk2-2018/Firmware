@@ -4,7 +4,7 @@
 class Terminal
 {
     private:
-        void send;
+        void send();
 
     public:
         void get_send();
