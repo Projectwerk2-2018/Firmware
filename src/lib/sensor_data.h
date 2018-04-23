@@ -15,6 +15,8 @@ class SensorData
     public:
 
     //SensorData(double temperature, int motion, double humidity);
+
+    
     string SensorData();
 
     string to_string(); 
