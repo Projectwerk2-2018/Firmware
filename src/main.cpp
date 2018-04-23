@@ -142,12 +142,14 @@ static void send_message()
     uint16_t packet_len;
     int16_t retcode;
 
-    //packet_len = 5;
+    
     // tx_buffer[0] = 0xAA;
     // tx_buffer[1] = 0xAA;
     // tx_buffer[2] = 0xAA;
     // tx_buffer[3] = 0xAA;
     // tx_buffer[4] = 0xAA; 
+
+    packet_len = sensordatabyteserializer.payload_size();
 
     tx_buffer = sensordatabyteserializer.serialize();
 
