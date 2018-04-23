@@ -9,6 +9,7 @@ class EnvironmentSensorBoard{
     public:
 
     EnvironmentSensorBoard(Transceiver inputTransceiver);
+    void update();
 
 
 
@@ -18,6 +19,7 @@ class EnvironmentSensorBoard{
     // collectSensorData(SensorData* outputData);
 
     // 3 sensoren
+
     
 
 
