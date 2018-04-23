@@ -1,5 +1,6 @@
-# pragma once
-# include "sensordata.h"
+#pragma once
+#include "sensordata.h"
+#include "stdint.h"
 
 
 class SensorDataByteSerializer{
@@ -7,7 +8,11 @@ class SensorDataByteSerializer{
     public:
         
         
-        int serialize();
+        uint8_t serialize();
+
+        int payload_size();
+
+
 
 
     private:
@@ -15,4 +20,6 @@ class SensorDataByteSerializer{
         int temp;
         int hum;
         int pir;
+
+        static const PAYLOAD_SIZE = 5;
 };
