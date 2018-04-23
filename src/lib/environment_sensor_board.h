@@ -15,7 +15,9 @@ class EnvironmentSensorBoard{
     private:
 
     Transceiver transceiver;
-    collectSensorData(SensorData* outputData);
+    // collectSensorData(SensorData* outputData);
+
+    // 3 sensoren
     
 
 
