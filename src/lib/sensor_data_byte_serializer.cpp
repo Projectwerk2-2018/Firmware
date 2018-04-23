@@ -1,12 +1,14 @@
-#include "sensordatabyteserializer.h"
+#include "sensor_data_byte_serializer.h"
 
-uint8_t SansorDataByteSerializer::serialize(){
+uint8_t SensorDataByteSerializer::serialize(){
+
+    SensorData dataPacket;
+
+    temp = dataPacket.getTemperature();
+    hum = dataPacket.getHumidity();
+    pir = dataPacket.getMotion();
     
-    temp = sensordata.get_temperature();
-    hum = sensordata.get_humidity();
-    pir = sensordata.get_motion();
-    
-    uint8_t payload[PAYLOAD_SIZE] = 0;
+    uint8_t payload[PAYLOAD_SIZE];
 
     payload[0] = temp >> 8;
     payload[1] = temp * 0xFF;
@@ -20,7 +22,7 @@ uint8_t SansorDataByteSerializer::serialize(){
     return payload;
 }
 
-int SansorDataByteSerializer::payload_size(){
+int SensorDataByteSerializer::payload_size(){
 
     return PAYLOAD_SIZE;
 }

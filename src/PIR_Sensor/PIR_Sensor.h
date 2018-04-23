@@ -1,11 +1,11 @@
-#pragma once
+// #pragma once
 
-class PIRSensor {
+// class PIRSensor {
 
-    public:
-        virtual int get_motion(void) = 0;
+//     public:
+//         virtual int get_motion(void) = 0;
 
-    public:
-        int pulseCount = 0;
+//     public:
+//         int pulseCount = 0;
 
-}
+// };

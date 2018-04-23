@@ -2,5 +2,5 @@
 
 void Terminal::get_send()
 {
-    return send;
+  
 }

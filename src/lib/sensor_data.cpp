@@ -18,14 +18,14 @@ SensorData::SensorData(double inputTemperature, int iputMotion, double inputHumi
 
 
 
-string SensorData::to_json(){
+string SensorData::toJSON(){
     return  "{\"temperature\": {\"value\":" + std::to_string(temperature) + ", \"unit\": \"°C\"}, " +
             "\"motion\": " + std::to_string(motion) + ", "
             "\"humidity\": {\"value\":" + std::to_string(humidity) + ", \"unit\": \"%\"}}" ;
 }
 
 
-string SensorData::to_string(){
+string SensorData::toString(){
     return "Temperature: " + std::to_string(temperature) + ", \n\r"
             + "Movement: " + std::to_string(motion)+ ", \n\r"
             + "Humidity: " + std::to_string(humidity);

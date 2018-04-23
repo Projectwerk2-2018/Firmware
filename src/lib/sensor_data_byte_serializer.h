@@ -1,5 +1,5 @@
 #pragma once
-#include "sensordata.h"
+#include "sensor_data.h"
 #include "stdint.h"
 
 
@@ -16,10 +16,11 @@ class SensorDataByteSerializer{
 
 
     private:
+        static const int PAYLOAD_SIZE = 5;
+        
         SensorData sensorData;
         int temp;
         int hum;
         int pir;
 
-        static const PAYLOAD_SIZE = 5;
 };

@@ -18,9 +18,9 @@ class SensorData
     SensorData(double temperature, int motion, double humidity);
 
     
-    string to_json();
+    string toJSON();
 
-    string to_string(); 
+    string toString(); 
 
     void setTemperature(double temperature);
     void setMotion(int motion);
