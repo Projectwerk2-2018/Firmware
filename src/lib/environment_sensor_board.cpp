@@ -12,15 +12,15 @@ EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver inputTransceiver){
 }
 
 
-void update(){
+void EnvironmentSensorBoard::update(){
     double temperature;
     int motion;
     double humidity;
 
     
-    data.setTemperature(temperature);
-    data.setMotion(motion);
-    data.setHumidity(humidity);
+    // data.setTemperature(temperature);
+    // data.setMotion(motion);
+    // data.setHumidity(humidity);
 
     SensorData data(temperature, motion, humidity);
     

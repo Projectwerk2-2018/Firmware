@@ -8,7 +8,7 @@ SensorData::SensorData(){
     humidity = 0.0;
 }
 
-SensorData(double inputTemperature, int iputMotion, double inputHumidity){
+SensorData::SensorData(double inputTemperature, int iputMotion, double inputHumidity){
     temperature = inputTemperature;
     motion = iputMotion;
     humidity = inputHumidity;
