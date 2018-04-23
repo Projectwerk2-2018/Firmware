@@ -6,5 +6,5 @@ void Temperature::setTemperature(double inputTemperature){
 }
 
 double Temperature::getTemperature(){
-    return temperature;
+    return (temperature);
 }

@@ -24,6 +24,8 @@ void EnvironmentSensorBoard::update(){
 
     SensorData data(temperature, motion, humidity);
     
+// Temperatuur, motion en humidity moeten waarden van een sensor krijgen. Hoe doe ik dat?
+
 
     transceiver.send(data);
 }

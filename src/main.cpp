@@ -29,6 +29,12 @@
 
 #include "sensordatabyteserializer.h"
 
+
+
+
+
+
+
 using namespace events;
 
 uint8_t tx_buffer[LORAMAC_PHY_MAXPAYLOAD];
@@ -125,6 +131,11 @@ int main (void)
         return -1;
     }
 
+    SensorDataByteSerializer payload;
+
+
+    
+
     printf("\r\n Connection - In Progress ...\r\n");
 
     // make your event queue dispatching events forever
@@ -143,15 +154,10 @@ static void send_message()
     int16_t retcode;
 
     
-    // tx_buffer[0] = 0xAA;
-    // tx_buffer[1] = 0xAA;
-    // tx_buffer[2] = 0xAA;
-    // tx_buffer[3] = 0xAA;
-    // tx_buffer[4] = 0xAA; 
+    
+    packet_len = payload.payload_size();
 
-    packet_len = sensordatabyteserializer.payload_size();
-
-    tx_buffer = sensordatabyteserializer.serialize();
+    tx_buffer = payload.serialize();
 
 
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,

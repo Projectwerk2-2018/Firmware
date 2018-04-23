@@ -10,9 +10,9 @@ class Temperature{
 
     private:
 
-    double temperature();
+    double temperature;
 
 
 
 
-}
+};

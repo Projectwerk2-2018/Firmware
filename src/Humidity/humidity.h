@@ -2,17 +2,21 @@
 
 class Humidity{
     
-    public:
-
-    double getHumidity();
-    void setHumidity(double inputHumidity);   
-
-
     private:
 
-    double humidity();
+    double humidity;
+
+
+
+    public:
+
+    void setHumidity(double inputHumidity);   
+
+    double getHumidity();
 
 
 
 
-}
+
+
+};
