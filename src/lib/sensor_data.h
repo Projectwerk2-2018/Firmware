@@ -15,12 +15,7 @@ class SensorData
     public:
 
     SensorData();
-    SensorData(double temperature, int motion, double humidity);
-
-    
-    string toJSON();
-
-    string toString(); 
+    SensorData(double inputTemperature, int iputMotion, double inputHumidity);
 
     void setTemperature(double temperature);
     void setMotion(int motion);
