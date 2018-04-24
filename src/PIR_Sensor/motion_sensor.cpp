@@ -1,5 +1,5 @@
 #include "motion_sensor.h"
 
-virtual int MotionSenor::get_motion(void){
-    
+int MotionSensor::get_motion(void){
+    return pulsecount;
 }

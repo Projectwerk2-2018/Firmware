@@ -4,12 +4,12 @@
 #include <time.h>
 #include "mbed.h"
 
-DigitalOut myPulse(D13);
+/*DigitalOut myPulse(D13);
 DigitalOut myPulse2(D1); 
-InterruptIn PIR(A0);
+InterruptIn PIR(A0);*/
 
  int PIRSensor::get_motion(void){
-     PIR.rise(&highPulseDetected);
+     /*PIR.rise(&highPulseDetected);
          pulseCount=0; 
          
          while(1){
@@ -22,5 +22,5 @@ InterruptIn PIR(A0);
                  myPulse2=1;
                  myPulse=0;
              } 
-         }
+         }*/
  }
