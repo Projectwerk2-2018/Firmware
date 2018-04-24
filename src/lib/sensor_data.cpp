@@ -1,6 +1,7 @@
 #include "sensor_data.h"
 #include <iostream> 
 using namespace std;
+#include <string>
 
 SensorData::SensorData(){
     temperature = 0.0;
