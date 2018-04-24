@@ -1,10 +1,17 @@
-#pragma once
+/*#pragma once
+#include "mbed.h"
 
 class MotionSensor{
 
     public:
-        virtual int get_motion(void) = 0;
+        virtual int motion(PinName pin);
+        void status();
+        int read();
 
     public:
-        int pulsecount = 0;
+
+        InterruptIn _interrupt;
+        volatile int _motion;
+        int numberOfMovements;
 };
+*/
