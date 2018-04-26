@@ -1,19 +1,15 @@
-/*#pragma once
+#pragma once
 #include "mbed.h"
-#include "motion_sensor.h"
 
-class PIRSensor : public MotionSensor{
-
-     public:
-         virtual int motion(PinName pin);
-         void status();
-         int read();
+class PIRSensor{
 
      public:
+         PIRSensor(PinName pin);
+         void isr_movement_detected();
+         int get_number_of_movements();
 
-        InterruptIn _interrupt;
-        volatile int _motion;
+     private:
+
+        InterruptIn sensorInterrupt;
         int numberOfMovements;
-
 };
-*/
