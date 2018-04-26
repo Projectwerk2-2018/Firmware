@@ -5,6 +5,7 @@
 class Temperature{
 
     private:
+    double temperature_value;
     I2C i2c;
     silabs::SILABS_RHT rhtSensor;
 

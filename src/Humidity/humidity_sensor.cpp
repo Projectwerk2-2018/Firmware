@@ -1,6 +1,6 @@
 #include "humidity_sensor.h"
 
-Humidity::Humidity() :i2c(PD6, PD7), rhtSensor(&i2c)
+Humidity::Humidity() :i2c(D6, D7), rhtSensor(&i2c)
 {
 }
 
