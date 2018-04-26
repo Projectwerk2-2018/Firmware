@@ -1,2 +1,4 @@
 mbed_app.json
 .vscode
+mbed-os/
+mbed-lora-radio-drv/

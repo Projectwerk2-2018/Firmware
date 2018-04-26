@@ -1,4 +1,4 @@
-#include "PIR_Sensor.h"
+#include "pir_sensor.h"
 #include "mbed.h"
 
     PIRSensor::PIRSensor(PinName pin) : sensorInterrupt(pin) {
