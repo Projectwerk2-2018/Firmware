@@ -6,7 +6,7 @@ class Temperature{
     double temperature_value;
 
     public:
-    Temperature();
+    Temperature(double temperature_value);
 
     public:
     double get_temperature_value();
