@@ -153,12 +153,17 @@ static void send_message()
     int16_t retcode;
 
     
-    SensorDataByteSerializer payload;
-    
-    
-    packet_len = payload.payload_size();
+    // SensorDataByteSerializer payload;
+    // packet_len = payload.payload_size();
+    // payload.serialize(tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
 
-    payload.serialize(tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
+    packet_len = 5;
+    
+    tx_buffer[0] = 0xF5;
+    tx_buffer[1] = 0xAA;
+    tx_buffer[2] = 0xC6;
+    tx_buffer[3] = 0x3C;
+    tx_buffer[4] = 0xEE;
 
 
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,

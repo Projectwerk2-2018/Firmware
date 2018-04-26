@@ -1,9 +1,9 @@
 #include "temperature_sensor.h"
 
-Temperature::Temperature(double temperature_value)
-{
-    set_temperature_Value(temperature_value);
-}
+// Temperature::Temperature(double temperature_value)
+// {
+//     set_temperature_Value(temperature_value);
+// }
 
 double Temperature::get_temperature_value()
 {

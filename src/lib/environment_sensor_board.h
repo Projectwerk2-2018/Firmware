@@ -2,8 +2,8 @@
 
 #include "transceiver.h"
 #include "sensor_data.h"
-#include "humidity.h"
-#include "temperature.h"
+#include "humidity_sensor.h"
+#include "temperature_sensor.h"
 #include "motion_sensor.h"
 
 
