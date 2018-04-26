@@ -10,10 +10,10 @@ EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver inputTransceiver){
 
 
 void EnvironmentSensorBoard::update(){
-    double temperature = temperatureSensor.getTemperature();
+    double temperature = temperatureSensor.get_temperature_value();
     int motion = 0;
     // int motion = motionSensor.getMotion();  // Motion sensor bestaat nog niet
-    double humidity = humiditySensor.getHumidity();   
+    double humidity = humiditySensor.get_humidity_value();   
 
     
     // data.setTemperature(temperature);
