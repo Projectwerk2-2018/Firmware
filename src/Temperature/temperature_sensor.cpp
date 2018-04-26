@@ -1,16 +1,12 @@
 #include "temperature_sensor.h"
 
-Temperature::Temperature(double temperature_value)
+
+Temperature::Temperature() : i2c(D6, D7), rhtSensor(&i2c)
 {
-    set_temperature_Value(temperature_value);
+
 }
 
 double Temperature::get_temperature_value()
 {
-    return temperature_value;
+    rhtSensor.get_temperature()/1000;
 }
-
-// void Temperature::set_temperature_Value(double temperature_value)
-// {
-//     this-> temperature_value = temperature_value;
-// }
