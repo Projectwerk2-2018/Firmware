@@ -24,5 +24,9 @@ class SensorData
     double getTemperature();
     int getMotion();
     double getHumidity();
+
+    string toJSON();
+
+    string toString();
     
 };

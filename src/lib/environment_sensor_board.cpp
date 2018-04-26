@@ -1,7 +1,4 @@
-
 #include "environment_sensor_board.h"
-
-
 
 //is this include needed?
 #include "sensor_data.h"
@@ -13,9 +10,10 @@ EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver inputTransceiver){
 
 
 void EnvironmentSensorBoard::update(){
-    double temperature;
-    int motion;
-    double humidity;
+    double temperature = temperatureSensor.getTemperature();
+    int motion = 0;
+    // int motion = motionSensor.getMotion();  // Motion sensor bestaat nog niet
+    double humidity = humiditySensor.getHumidity();   
 
     
     // data.setTemperature(temperature);
@@ -23,8 +21,6 @@ void EnvironmentSensorBoard::update(){
     // data.setHumidity(humidity);
 
     SensorData data(temperature, motion, humidity);
-    
-// Temperatuur, motion en humidity moeten waarden van een sensor krijgen. Hoe doe ik dat?
 
 
     transceiver.send(data);

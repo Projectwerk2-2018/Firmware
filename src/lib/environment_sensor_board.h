@@ -2,6 +2,9 @@
 
 #include "transceiver.h"
 #include "sensor_data.h"
+#include "humidity.h"
+#include "temperature.h"
+#include "motion_sensor.h"
 
 
 class EnvironmentSensorBoard{
@@ -16,9 +19,13 @@ class EnvironmentSensorBoard{
     private:
 
     Transceiver transceiver;
-    // collectSensorData(SensorData* outputData);
 
     // 3 sensoren
+
+    Humidity humiditySensor;
+    Temperature temperatureSensor;
+    // MotionSensor motionSensor;       // Motion sensor bestaat nog niet
+    
 
     
 
