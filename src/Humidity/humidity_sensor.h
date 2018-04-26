@@ -4,12 +4,11 @@
 class Humidity
 {
     private:
-    double humidity_value;
     I2C i2c;
     silabs::SILABS_RHT rhtSensor;
 
     public:
-    Humidity(double humidity_value);
+    Humidity();
 
     public:
     double get_humidity_value();
