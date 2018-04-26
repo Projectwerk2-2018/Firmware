@@ -1,15 +1,15 @@
 #pragma once
 #include "SILABS_RHT.h"
 
+
 class Temperature{
 
     private:
-    double temperature_value;
     I2C i2c;
     silabs::SILABS_RHT rhtSensor;
 
     public:
-    Temperature(double temperature_value);
+    Temperature();
 
     public:
     double get_temperature_value();
