@@ -23,14 +23,5 @@ class EnvironmentSensorBoard{
 
     Humidity humiditySensor;
     Temperature temperatureSensor;
-    // MotionSensor motionSensor;       // Motion sensor bestaat nog niet
-    
-
-    
-
-
-
-
-
-
+    //MotionSensor motionSensor;       // Motion sensor bestaat nog niet
 };
