@@ -4,7 +4,7 @@
 #include "sensor_data.h"
 #include "humidity_sensor.h"
 #include "temperature_sensor.h"
-#include "motion_sensor.h"
+#include "PIR_Sensor.h"
 
 
 class EnvironmentSensorBoard{
