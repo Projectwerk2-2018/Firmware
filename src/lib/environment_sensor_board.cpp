@@ -4,9 +4,9 @@
 #include "sensor_data.h"
 
 
-EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver inputTransceiver){
-    transceiver = inputTransceiver;
-}
+// EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver inputTransceiver){
+//     transceiver = inputTransceiver;
+// }
 
 
 void EnvironmentSensorBoard::update(){
