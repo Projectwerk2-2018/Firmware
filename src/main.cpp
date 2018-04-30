@@ -27,14 +27,6 @@
 // Application helpers
 #include "lora_radio_helper.h"
 
-#include "sensor_data_byte_serializer.h"
-
-
-
-
-
-
-
 using namespace events;
 
 uint8_t tx_buffer[LORAMAC_PHY_MAXPAYLOAD];
@@ -131,10 +123,6 @@ int main (void)
         return -1;
     }
 
-
-
-    
-
     printf("\r\n Connection - In Progress ...\r\n");
 
     // make your event queue dispatching events forever
@@ -152,19 +140,12 @@ static void send_message()
     uint16_t packet_len;
     int16_t retcode;
 
-    
-    // SensorDataByteSerializer payload;
-    // packet_len = payload.payload_size();
-    // payload.serialize(tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
-
     packet_len = 5;
-    
-    tx_buffer[0] = 0xF5;
+    tx_buffer[0] = 0xAA;
     tx_buffer[1] = 0xAA;
-    tx_buffer[2] = 0xC6;
-    tx_buffer[3] = 0x3C;
-    tx_buffer[4] = 0xEE;
-
+    tx_buffer[2] = 0xAA;
+    tx_buffer[3] = 0xAA;
+    tx_buffer[4] = 0xAA;           
 
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,
                            MSG_CONFIRMED_FLAG);
@@ -265,4 +246,3 @@ int main (void)
 }
 #endif //MBED_CONF_APP_LORAWAN_ENABLED
 // EOF
-
