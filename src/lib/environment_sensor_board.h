@@ -11,7 +11,7 @@ class EnvironmentSensorBoard{
 
     public:
 
-    // EnvironmentSensorBoard(Transceiver inputTransceiver);
+    EnvironmentSensorBoard(Transceiver * inputTransceiver);
     void update();
 
 

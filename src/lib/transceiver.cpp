@@ -3,6 +3,4 @@
 #include "sensor_data.h"
 
 
-void Transceiver::send(SensorData inputData){
-    
-};
+void Transceiver::send(SensorData inputData) = 0;

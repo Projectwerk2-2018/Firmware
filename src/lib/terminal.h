@@ -1,7 +1,7 @@
 #pragma once
 #include "transceiver.h"
 
-class Terminal
+class Terminal : public Transceiver
 {
     private:
         void send();
@@ -11,5 +11,7 @@ class Terminal
     public:
         void get_send();
 
-        void displayData(SensorData dataCluster);
+        virtual void send_message(std::string message) {
+            std::cout << "Message = " << message << std::endl;
+        }
 };

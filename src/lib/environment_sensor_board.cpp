@@ -1,12 +1,10 @@
 #include "environment_sensor_board.h"
 
-//is this include needed?
-#include "sensor_data.h"
 
 
-// EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver inputTransceiver){
-//     transceiver = inputTransceiver;
-// }
+EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver * inputTransceiver){
+    this->transceiver = inputTransceiver;
+}
 
 
 void EnvironmentSensorBoard::update(){
@@ -22,7 +20,7 @@ void EnvironmentSensorBoard::update(){
     SensorData data(temperature, motion, humidity);
 
 
-    transceiver.send(data);
+    transceiver->send(data);
 }
 
 
