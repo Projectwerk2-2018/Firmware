@@ -3,6 +3,7 @@
 
     PIRSensor::PIRSensor(PinName pin) : sensorInterrupt(pin) {
         sensorInterrupt.rise(callback(this, &PIRSensor::isr_movement_detected));
+        this->numberOfMovements = 0;
     }
 
     void PIRSensor::isr_movement_detected() {

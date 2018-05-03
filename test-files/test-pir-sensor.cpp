@@ -10,10 +10,10 @@ int main(){
 
     PIRSensor motionDetector(D0);
     device.baud(19200);
-    int numberOfMovements = motionDetector.get_number_of_movements();
 
     while(1){   
-        device.printf("movements : %u",numberOfMovements);
+    int numberOfMovements = motionDetector.get_number_of_movements();
+        device.printf("Number of movements : %i\r\n",numberOfMovements);
         wait_ms(5000);
     }
 
