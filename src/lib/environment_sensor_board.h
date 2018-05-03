@@ -18,7 +18,7 @@ class EnvironmentSensorBoard{
 
     private:
 
-    Transceiver transceiver;
+    Transceiver * transceiver;
 
     // 3 sensoren
 

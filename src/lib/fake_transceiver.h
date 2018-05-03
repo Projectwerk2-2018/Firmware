@@ -1,14 +1,13 @@
 #pragma once
 
 #include "transceiver.h"
+#include <string>
 
 
 
 class FakeTransceiver : public Transceiver {
 
     public:
-        virtual void send_message(std::string message) {
-            // DO nothing here, its all fake
-        }
+        virtual void send_message(std::string message);
     
 };

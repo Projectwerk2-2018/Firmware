@@ -1,10 +1,5 @@
-#include <iostream>
+#include "fake_transceiver.h"
 
-using namespace std;
-
-
-class FakeTransceiver : public Transceiver {
-
-    virtual void send_message(std::string message);
-    
-};
+void send_message(std::string message){
+    // DO nothing here, its all fake
+}

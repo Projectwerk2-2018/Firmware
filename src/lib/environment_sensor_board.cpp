@@ -2,7 +2,8 @@
 
 
 
-EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver * inputTransceiver){
+EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver * inputTransceiver)
+: motionSensor(D0) {
     this->transceiver = inputTransceiver;
 }
 
@@ -20,7 +21,7 @@ void EnvironmentSensorBoard::update(){
     SensorData data(temperature, motion, humidity);
 
 
-    transceiver->send(data);
+    transceiver->send_message(data);
 }
 
 
