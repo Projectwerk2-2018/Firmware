@@ -123,3 +123,5 @@ Mbed LoRaWANStack initialized
 
 # UML diagram
 ![UML diagram](./images/UML.png)
+
+
