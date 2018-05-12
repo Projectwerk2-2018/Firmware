@@ -1,13 +1,13 @@
 #pragma once
+
 #include "transceiver.h"
+#include <string>
 
 
 
-class Terminal : public Transceiver
-{
+class FakeTransceiver : public Transceiver {
+
     public:
-        void get_send();
-
         virtual void send_message(std::string message);
-
+    
 };

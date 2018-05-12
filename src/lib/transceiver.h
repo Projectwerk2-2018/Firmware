@@ -7,6 +7,6 @@ class Transceiver
     
     public:
 
-    virtual void send(SensorData inputData);
+    virtual void send_message(SensorData inputData) = 0;
     
 };

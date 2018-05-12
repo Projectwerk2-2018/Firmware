@@ -11,14 +11,14 @@ class EnvironmentSensorBoard{
 
     public:
 
-    // EnvironmentSensorBoard(Transceiver inputTransceiver);
+    EnvironmentSensorBoard(Transceiver * inputTransceiver);
     void update();
 
 
 
     private:
 
-    Transceiver transceiver;
+    Transceiver * transceiver;
 
     // 3 sensoren
 

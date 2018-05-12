@@ -10,15 +10,15 @@ Next we need to download the libraries:
 mbed deploy
 ```
 
-Now setup the project to compile for example for the LPC1768 by editing the `.mbed` file and adding the following to it (this can also be done automatically using the mbed detect command if you have an mbed connected):
+Now setup the project to compile for example for the NUCLEO_L476RG by editing the `.mbed` file and adding the following to it (this can also be done automatically using the mbed detect command if you have an mbed connected):
 
 ```
 ROOT=.
 TOOLCHAIN=GCC_ARM
-TARGET=LPC1768
+TARGET=NUCLEO_L476RG
 ```
 
-Last we need to enable C++11 compilation. THis can be achieved by changing the three json configurations files in `code/mbed-os/tools/profiles`. Change the `cxx` section of the `GCC_ARM` config to the following:
+Last we need to enable C++11 compilation. This can be achieved by changing the three json configurations files in `code/mbed-os/tools/profiles`. Change the `cxx` section of the `GCC_ARM` config to the following:
 
 ```json
         "cxx": ["-std=gnu++11", "-fno-rtti", "-Wvla"],
@@ -94,6 +94,13 @@ For example:
 $ mbed compile -m YOUR_TARGET -t ARM
 ```
 
+If you have made the `.mbed` file, then it is sufficient to just run the `mbed compile` command.
+If you want to flash the project into your mbed board, just add `-f` after the command like so: 
+
+```shell
+$ mbed compile -f
+```
+
 ## Running the application
 
 Drag and drop the application binary from `BUILD/YOUR_TARGET/ARM/mbed-os-example-lora.bin` to your Mbed enabled target hardware, which appears as a USB device on your host machine. 
@@ -123,3 +130,5 @@ Mbed LoRaWANStack initialized
 
 # UML diagram
 ![UML diagram](./images/UML.png)
+
+
