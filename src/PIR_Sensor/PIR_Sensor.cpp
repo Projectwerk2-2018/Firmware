@@ -8,6 +8,8 @@
         this ->positiveEdge = 0;
         this ->negativeEdge = 0;
         this ->timeOn = 0;
+        this ->totalTimeOn = 0;
+        this ->percentageTimeOn = 0;
     }
 
     void PIRSensor::positive_edge_detected() {
@@ -26,6 +28,24 @@
         positiveEdge = 0;
     }
 
+    void PIRSensor::calculate_total_time_on(){
+        totalTimeOn = totalTimeOn + timeOn;
+        timeOn = 0;
+        percentageTimeOn = totalTime/2000;
+    }
+
+    int PIRSensor::get_positive_edge(){
+        int tempPositiveEdge = positiveEdge;
+        positiveEdge = 0;
+        return tempPositiveEdge;
+    }
+
+    int PIRSensor::get_negative_edge(){
+        int tempNegativeEdge = negativeEdge;
+        negativeEdge = 0;
+        return tempNegativeEdge;
+    }
+
     int PIRSensor::get_time_on(){
         int tempTimeOn = timeOn;
         timeOn = 0;
@@ -33,5 +53,5 @@
     }
 
     int PIRSensor::get_number_of_movements() {
-
+        return 0;
     }
