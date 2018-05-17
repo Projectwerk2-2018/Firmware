@@ -29,6 +29,7 @@
     },
     "target_overrides": {
         "*": {
+            "lorawan-enabled": true,
             "platform.stdio-convert-newlines": true,
             "platform.stdio-baud-rate": 115200,
             "platform.default-serial-baud-rate": 115200,
@@ -38,6 +39,31 @@
             "lora.device-eui": "{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }",
             "lora.application-eui": "{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }",
             "lora.application-key": "{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }"
+        },
+
+        "NUCLEO_L476RG": {
+            "lorawan-enabled":      true,
+
+            "lora-radio":          "SX1276",
+            "lora-spi-mosi":       "D11",
+            "lora-spi-miso":       "D12",
+            "lora-spi-sclk":       "D13",
+            "lora-cs":             "D10",
+            "lora-reset":          "A0",
+            "lora-dio0":           "D2",
+            "lora-dio1":           "D3",
+            "lora-dio2":           "D4",
+            "lora-dio3":           "D5",
+            "lora-dio4":           "D8",
+            "lora-dio5":           "D9",
+            "lora-rf-switch-ctl1": "NC",
+            "lora-rf-switch-ctl2": "NC",
+            "lora-txctl":          "NC",
+            "lora-rxctl":          "NC",
+            "lora-ant-switch":     "NC",
+            "lora-pwr-amp-ctl":    "NC",
+            "lora-tcxo":           "NC"
+
         },
 
         "K64F": {
@@ -254,7 +280,32 @@
             "lora-ant-switch":     "NC",
             "lora-pwr-amp-ctl":    "NC",
             "lora-tcxo":           "RF_TCXO_EN"
+        },
+
+        "NUCLEO-L073RZ": {
+            "lorawan-enabled":      true,
+
+            "lora-radio":           "SX1276",
+            "lora-spi-mosi":        "D11",
+            "lora-spi-miso":        "D12",
+            "lora-spi-sclk":        "D13",
+            "lora-cs":              "D10",
+            "lora-reset":           "D9",
+            "lora-dio0":            "D2",
+            "lora-dio1":            "D3",
+            "lora-dio2":            "D4",
+            "lora-dio3":            "D5",
+            "lora-dio4":            "D6",
+            "lora-dio5":            "D7",
+            "lora-rf-switch-ctl1":  "NC",
+            "lora-rf-switch-ctl2":  "NC",
+            "lora-txctl":           "NC",
+            "lora-rxctl":           "NC",
+            "lora-ant-switch":      "NC",
+            "lora-pwr-amp-ctl":     "NC",
+            "lora-tcxo":            "NC"
         }
+
     },
     "macros": ["MBEDTLS_USER_CONFIG_FILE=\"mbedtls_lora_config.h\""]
 }
