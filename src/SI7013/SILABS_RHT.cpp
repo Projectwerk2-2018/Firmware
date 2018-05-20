@@ -54,7 +54,7 @@
 #define SI7013_READ_FWREV_2     0xB8
 
 /** I2C device address for Si7013 */
-#define SI7013_ADDR      0x82
+#define SI7013_ADDR      0x80
 /** I2C device address for Si7021 */
 #define SI7021_ADDR      0x80
 

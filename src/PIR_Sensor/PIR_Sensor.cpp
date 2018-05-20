@@ -25,23 +25,10 @@
         }
     }
 
-<<<<<<< HEAD
-    void PIRSensor::calculate_time_on(){
-        timeOn = negativeEdge - positiveEdge;
-        negativeEdge = 0;
-        positiveEdge = 0;
-    }
-
-    void PIRSensor::calculate_total_time_on(){
-        totalTimeOn = totalTimeOn + timeOn;
-        timeOn = 0;
-        percentageTimeOn = totalTimeOn/2000;
-=======
     void PIRSensor::positive_edge_detected() {
         state = HIGH;
         int deltaT = get_delta();
         lowtime += deltaT;
->>>>>>> 76ec7596ea025adca667343c194da534c84a5747
     }
 
     void PIRSensor::negative_edge_detected() {
