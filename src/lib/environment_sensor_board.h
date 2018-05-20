@@ -6,7 +6,6 @@
 #include "temperature_sensor.h"
 #include "PIR_Sensor.h"
 
-
 class EnvironmentSensorBoard{
 
     public:
@@ -23,6 +22,6 @@ class EnvironmentSensorBoard{
     // 3 sensoren
 
     Humidity humiditySensor;
-    Temperature temperatureSensor;
+    //Temperature temperatureSensor;
     PIRSensor motionSensor;
 };
