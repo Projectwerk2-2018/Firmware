@@ -31,7 +31,7 @@
     void PIRSensor::calculate_total_time_on(){
         totalTimeOn = totalTimeOn + timeOn;
         timeOn = 0;
-        percentageTimeOn = totalTime/2000;
+        percentageTimeOn = totalTimeOn/2000;
     }
 
     int PIRSensor::get_positive_edge(){
