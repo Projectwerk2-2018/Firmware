@@ -10,13 +10,17 @@ int main(){
 
     PIRSensor motionDetector(A0);
     device.baud(19200);
-
+    //start
+    motionDetector.start();
+        
     while(1){ 
 
-        motionDetector.calculate_time_on();  
-        device.printf("positive edge: %i\r\n",motionDetector.get_positive_edge());
-        device.printf("negative edge: %i\r\n",motionDetector.get_negative_edge());
-        device.printf("time on: %i\r\n",motionDetector.get_time_on());
+        // stop
+        motionDetector.stop();
+        //calculate
+        device.printf("percentage: %i\r\n",motionDetector.get_percentage_movement());
+        // start
+        motionDetector.start();
         wait_ms(1000);
     }
 
