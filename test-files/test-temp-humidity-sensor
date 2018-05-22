@@ -10,7 +10,7 @@ int main(){
 
     I2C sensorI2C(PC_1, PC_0);
     TemperatureHumidity tempsensor(&sensorI2C);
-    device.baud(19200);
+    device.baud(9600);
             
     while(1){ 
 

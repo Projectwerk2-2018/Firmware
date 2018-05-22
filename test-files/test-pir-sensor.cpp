@@ -8,10 +8,11 @@ Serial device(USBTX, USBRX); // tx, rx
 
 int main(){
 
-    PIRSensor motionDetector(A0);
+    PIRSensor motionDetector(PA_9);
     //start
     motionDetector.start();
-        
+    device.baud(9600);
+
     while(1){ 
 
         // stop
