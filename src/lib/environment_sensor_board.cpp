@@ -9,19 +9,19 @@ EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver * inputTransceiver)
 
 
 void EnvironmentSensorBoard::update(){
-    double temperature = temperatureSensor.get_temperature_value();
+    //double temperature = temperatureSensor.get_temperature_value();
     int motion = motionSensor.get_percentage_movement();
-    double humidity = humiditySensor.get_humidity_value();   
+    //double humidity = humiditySensor.get_humidity_value();   
 
     
     // data.setTemperature(temperature);
     // data.setMotion(motion);
     // data.setHumidity(humidity);
 
-    SensorData data(temperature, motion, humidity);
+    //SensorData data(temperature, motion, humidity);
 
 
-    transceiver->send_message(data);
+    //transceiver->send_message(data);
 }
 
 
