@@ -46,4 +46,3 @@
         int deltaT = timer.read_ms() - lowtime - hightime;
         return deltaT;
     }
-
