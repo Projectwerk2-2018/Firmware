@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 #include <stdio.h>
+#include "mbed.h"
 
 #if MBED_CONF_APP_LORAWAN_ENABLED
 
@@ -79,11 +80,16 @@ static LoRaWANInterface lorawan(radio);
  */
 static lorawan_app_callbacks_t callbacks;
 
+DigitalOut myled (PC_8);
+DigitalOut myled1 (PC_9);
+DigitalOut myled2 (PC_10);
+
 /**
  * Entry point for application
  */
 int main (void)
 {
+    myled2 = 1;
     // stores the status of a call to LoRaWAN protocol
     lorawan_status_t retcode;
 
@@ -143,18 +149,18 @@ static void send_message()
     uint16_t packet_len;
     int16_t retcode;
 
-    // SensorDataByteSerializer payload;
-    // packet_len = payload.payload_size();
-    // payload.serialize(tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
+    SensorDataByteSerializer payload;
+    packet_len = payload.payload_size();
+    payload.serialize(tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
 
 
 
     packet_len = 5;
-    tx_buffer[0] = 0xF5;
-    tx_buffer[1] = 0xAA;
-    tx_buffer[2] = 0xC6;
-    tx_buffer[3] = 0x3C;
-    tx_buffer[4] = 0xEE;           
+    // tx_buffer[0] = 0xF5;
+    // tx_buffer[1] = 0xAA;
+    // tx_buffer[2] = 0xC6;
+    // tx_buffer[3] = 0x3C;
+    // tx_buffer[4] = 0xEE;           
 
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,
                            MSG_CONFIRMED_FLAG);
