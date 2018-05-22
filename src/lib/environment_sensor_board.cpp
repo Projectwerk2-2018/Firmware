@@ -3,7 +3,7 @@
 
 
 EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver * inputTransceiver)
-: motionSensor(D0) {
+: motionSensor(D8) {
     this->transceiver = inputTransceiver;
 }
 
@@ -13,10 +13,7 @@ void EnvironmentSensorBoard::update(){
     int motion = motionSensor.get_percentage_movement();
     //double humidity = humiditySensor.get_humidity_value();   
 
-    
-    // data.setTemperature(temperature);
-    // data.setMotion(motion);
-    // data.setHumidity(humidity);
+
 
     //SensorData data(temperature, motion, humidity);
 

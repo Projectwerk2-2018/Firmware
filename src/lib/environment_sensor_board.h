@@ -5,7 +5,6 @@
 #include "temperature_humidity_sensor.h"
 #include "PIR_Sensor.h"
 
-
 class EnvironmentSensorBoard{
 
     public:

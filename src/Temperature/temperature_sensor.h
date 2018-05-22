@@ -1,21 +1,21 @@
-#pragma once
-#include "SILABS_RHT.h"
-#include "mbed.h"
+// #pragma once
+// #include "SILABS_RHT.h"
+// #include "mbed.h"
 
 
-class Temperature{
+// class Temperature{
 
-    private:
-    double temperature_value;
-    I2C i2c;
-    silabs::SILABS_RHT rhtSensor;
+//     private:
+//     double temperature_value;
+//     I2C i2c;
+//     silabs::SILABS_RHT rhtSensor;
 
-    public:
-    Temperature();
+//     public:
+//     Temperature();
 
-    public:
-    double get_temperature_value();
+//     public:
+//     double get_temperature_value();
 
-    // public:
-    // void set_temperature_Value(double temperature_value);
-};
+//     // public:
+//     // void set_temperature_Value(double temperature_value);
+// };
