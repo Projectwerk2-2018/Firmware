@@ -29,6 +29,8 @@
 #include "lora_radio_helper.h"
 
 #include "sensor_data_byte_serializer.h"
+#include "environment_sensor_board.h"
+
 
 
 using namespace events;
@@ -85,7 +87,7 @@ DigitalOut myled1 (PC_9);
 DigitalOut myled2 (PC_10);
 
 
-EnvironmentSensorBoard board;
+EnvironmentSensorBoard board(nullptr);
 
 
 

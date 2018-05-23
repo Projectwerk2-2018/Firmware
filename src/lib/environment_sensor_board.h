@@ -10,7 +10,7 @@ class EnvironmentSensorBoard{
     public:
 
     EnvironmentSensorBoard(Transceiver * inputTransceiver);
-    EnvironmentSensorBoard();
+
     void update();
     SensorData get_data();
 
@@ -22,7 +22,7 @@ class EnvironmentSensorBoard{
 
     // 3 sensoren
 
-    //Humidity humiditySensor;
-    //Temperature temperatureSensor;
+    TemperatureHumidity * temperatureSensor;
     PIRSensor motionSensor;
+    I2C sensorI2C;
 };

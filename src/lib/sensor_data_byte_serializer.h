@@ -13,7 +13,7 @@ class SensorDataByteSerializer{
         int payload_size();
 
         
-}
+
 
 
 
