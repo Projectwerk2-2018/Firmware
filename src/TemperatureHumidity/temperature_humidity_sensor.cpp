@@ -5,10 +5,19 @@
     }
 
     void TemperatureHumidity::read_values() {
-        if(!rhtSensor.check_availability(si7013, nullptr) &&
-            !rhtSensor.measure(si7013, nullptr)){
-            temperature = ((rhtSensor.get_temperature()/1000.0)+(rhtSensor.get_temperature()%1000));
-            humidity = ((rhtSensor.get_humidity()/1000)+(rhtSensor.get_humidity()%1000));
+        if(!rhtSensor.check_availability(si7013, nullptr)){
+            wait_ms(100);
+            int ret = rhtSensor.measure(si7013, nullptr);
+            wait_ms(100);
+            if (!ret) {
+                temperature = ((rhtSensor.get_temperature()/1000.0));
+                humidity = ((rhtSensor.get_humidity()/1000));
+            } else {
+                printf("Failed to read temperature/humidity\r\n");
+            }
+
+        } else {
+            printf("Failed to check avail temperature/humidity\r\n");
         }
     }
 
