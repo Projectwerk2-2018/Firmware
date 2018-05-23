@@ -84,6 +84,11 @@ DigitalOut myled (PC_8);
 DigitalOut myled1 (PC_9);
 DigitalOut myled2 (PC_10);
 
+
+EnvironmentSensorBoard board;
+
+
+
 /**
  * Entry point for application
  */
@@ -149,9 +154,10 @@ static void send_message()
     uint16_t packet_len;
     int16_t retcode;
 
+    SensorData data = board.get_data();
     SensorDataByteSerializer payload;
     packet_len = payload.payload_size();
-    payload.serialize(tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
+    payload.serialize(data, tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
 
 
 

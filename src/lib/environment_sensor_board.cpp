@@ -7,6 +7,9 @@ EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver * inputTransceiver)
     this->transceiver = inputTransceiver;
 }
 
+EnvironmentSensorBoard::EnvironmentSensorBoard(){
+}
+
 
 void EnvironmentSensorBoard::update(){
     //double temperature = temperatureSensor.get_temperature_value();
@@ -20,6 +23,11 @@ void EnvironmentSensorBoard::update(){
 
 
     transceiver->send_message(data);
+}
+
+SensorData EnvironmentSensorBoard::get_data (){
+    SensorData data (1,2,3);
+    return data;
 }
 
 

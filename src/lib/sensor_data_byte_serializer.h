@@ -8,9 +8,13 @@ class SensorDataByteSerializer{
     public:
         
         
-        void serialize(uint8_t* payload, int maxPayload);
+        void serialize(SensorData dataPacket, uint8_t* payload, int maxPayload);
 
         int payload_size();
+
+        
+}
+
 
 
 
