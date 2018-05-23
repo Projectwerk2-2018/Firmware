@@ -2,6 +2,7 @@
 #include "mbed.h"
 
     PIRSensor::PIRSensor(PinName pin) : sensorInterrupt(pin) {
+        sensorInterrupt.mode(PullDown);
         sensorInterrupt.rise(callback(this, &PIRSensor::positive_edge_detected));
         sensorInterrupt.fall(callback(this, &PIRSensor::negative_edge_detected));
         this->state = LOW;
