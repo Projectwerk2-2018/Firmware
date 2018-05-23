@@ -13,16 +13,15 @@ EnvironmentSensorBoard::EnvironmentSensorBoard(){
 
 void EnvironmentSensorBoard::update(){
     //double temperature = temperatureSensor.get_temperature_value();
-    double temperature = 45;
     int motion = motionSensor.get_percentage_movement();
     //double humidity = humiditySensor.get_humidity_value();   
-    double humidity = 67;   
 
 
-    SensorData data(temperature, motion, humidity);
+
+    //SensorData data(temperature, motion, humidity);
 
 
-    transceiver->send_message(data);
+    //transceiver->send_message(data);
 }
 
 SensorData EnvironmentSensorBoard::get_data (){

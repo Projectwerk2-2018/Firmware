@@ -2,8 +2,7 @@
 
 #include "transceiver.h"
 #include "sensor_data.h"
-#include "humidity_sensor.h"
-#include "temperature_sensor.h"
+#include "temperature_humidity_sensor.h"
 #include "PIR_Sensor.h"
 
 class EnvironmentSensorBoard{
@@ -23,7 +22,7 @@ class EnvironmentSensorBoard{
 
     // 3 sensoren
 
-    Humidity humiditySensor;
+    //Humidity humiditySensor;
     //Temperature temperatureSensor;
     PIRSensor motionSensor;
 };
