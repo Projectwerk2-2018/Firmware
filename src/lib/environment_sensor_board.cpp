@@ -3,7 +3,7 @@
 
 
 EnvironmentSensorBoard::EnvironmentSensorBoard(Transceiver * inputTransceiver)
-: motionSensor(D8), sensorI2C(PC_1, PC_0) //PC_1=SDA, PC_0=SCL
+: motionSensor(PA_9), sensorI2C(PC_1, PC_0) //PC_1=SDA, PC_0=SCL
 {
     this->transceiver = inputTransceiver;
     temperatureSensor = new TemperatureHumidity(&sensorI2C);
