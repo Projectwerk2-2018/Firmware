@@ -29,6 +29,8 @@
 #include "lora_radio_helper.h"
 
 #include "sensor_data_byte_serializer.h"
+#include "environment_sensor_board.h"
+
 
 
 using namespace events;
@@ -83,6 +85,11 @@ static lorawan_app_callbacks_t callbacks;
 DigitalOut myled (PC_8);
 DigitalOut myled1 (PC_9);
 DigitalOut myled2 (PC_10);
+
+
+EnvironmentSensorBoard board(nullptr);
+
+
 
 /**
  * Entry point for application
@@ -149,9 +156,10 @@ static void send_message()
     uint16_t packet_len;
     int16_t retcode;
 
+    SensorData data = board.get_data();
     SensorDataByteSerializer payload;
     packet_len = payload.payload_size();
-    payload.serialize(tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
+    payload.serialize(data, tx_buffer, LORAMAC_PHY_MAXPAYLOAD);
 
 
 
